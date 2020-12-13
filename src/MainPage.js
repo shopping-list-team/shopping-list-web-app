@@ -1,6 +1,6 @@
 import './MainPage.css';
 import logo from './logo.svg';
-
+import React from 'react';
 function MainPage(props){
     return(
         <div>
@@ -15,12 +15,10 @@ function MainPage(props){
             <br/>
 
             <div className="codeInput">
-            <input type="text" placeholder="Enter code" maxLength="8" spellCheck="false"></input>
+            <input type="text" placeholder="Enter code" maxLength="8" spellCheck="false" ref={props.inputRef}></input>
             </div>
 
-            <div className="btnOpenExisting"> 
-            OPEN LIST
-            </div>
+            <div className="btnOpenExisting" onClick={props.openExistingClick}>OPEN LIST</div>
         </div>
     );
 }
